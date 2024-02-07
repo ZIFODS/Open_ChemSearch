@@ -232,7 +232,7 @@ To setup a Kubernetes cluster:
     `helm install chemsearch k8s`
    ```
 
-Once the cluster is setup, it can be benchmarked through the [chemsearch-benchmark](https://github.com/ZIFODS/chemsearch-benchmark) project.
+Once the cluster is setup, it can be benchmarked through the [chemsearch-benchmark](https://github.com/ZIFODS/Open_ChemSerarch-benchmark) project.
 
 ![image](https://github.com/ZIFODS/Open_ChemSearch/assets/122999957/11105bbc-2373-406c-bc6a-8a043650e4f4)
 
