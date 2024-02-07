@@ -1,0 +1,17 @@
+env:
+  bitLength: "insertValueHere"
+  cartridge: "insertValueHere"
+  database: "insertValueHere"
+  fingerprintMethod: "insertValueHere"
+  fingerprints: "insertValueHere"
+  logFile: "insertValueHere"
+  molecules: "insertValueHere"
+  processes: "insertValueHere"
+  output_dir: "insertValueHere"
+image: "insertValueHere"
+replicas: 1
+serviceAccount:
+  roleARN: "insertValueHere"
+volume:
+  fileSystemId: "insertValueHere"
+  mountPath: "/data"

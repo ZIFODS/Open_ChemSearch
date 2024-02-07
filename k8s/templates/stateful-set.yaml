@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: chemsearch
+spec:
+  serviceName: "chemsearch"
+  podManagementPolicy: Parallel
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: chemsearch
+  template:
+    metadata:
+      labels:
+        app: chemsearch
+    spec:
+      serviceAccountName: app
+      containers:
+        - name: chemsearch
+          image: {{ .Values.image }}
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+          env:
+            - name: POD_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: MOLECULES
+              value: {{ .Values.env.molecules | quote }}
+            - name: FINGERPRINTS
+              value: {{ .Values.env.fingerprints | quote }}
+            - name: CARTRIDGE
+              value: {{ .Values.env.cartridge | quote }}
+            - name: DATABASE
+              value: {{ .Values.env.database | quote }}
+            - name: PROCESSES
+              value: {{ .Values.env.processes | quote }}
+            - name: BIT_LENGTH
+              value: {{ .Values.env.bitLength | quote }}
+            - name: FINGERPRINT_METHOD
+              value: {{ .Values.env.fingerprintMethod | quote }}
+            - name: LOG_FILE
+              value: {{ .Values.env.logFile | quote }}
+            - name: OUTPUT_DIR
+              value: {{ .Values.env.output_dir | quote }}
+          ports:
+            - containerPort: 5000
+              name: web
+          volumeMounts:
+            - name: persistent-storage
+              mountPath: {{ .Values.volume.mountPath | quote }}
+          command: ["/opt/conda/bin/app"]
+          args: ["--host", "0.0.0.0", "--port", "5000"]
+      volumes:
+        - name: persistent-storage
+          persistentVolumeClaim:
+            claimName: efs-chemsearch-claim

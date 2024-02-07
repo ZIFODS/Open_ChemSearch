@@ -1,0 +1,41 @@
+name: chemsearchEnv
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  # Linters
+  - black
+  - flake8
+  - isort
+  - pre-commit
+
+  # Testing
+  - pytest
+  - pytest-mock
+
+  # Python
+  - python=3.11
+
+  # Libraries
+  - attrs
+  - boto3
+  - cupy=11.6
+  - dask=2023.3.1
+  - fastapi
+  - httpx
+  - jupyterlab
+  - numpy
+  - pandas
+  - pandera
+  - pyprojroot
+  - python-dotenv
+  - requests
+  - seaborn
+  - structlog
+  - rdkit=2022.09.5
+  - tqdm
+  - uvicorn
+
+  - pip~=22.0
+  - pip:
+      - -e .
