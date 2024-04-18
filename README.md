@@ -22,7 +22,7 @@ Once the Python environment is activated, ensure everything is setup correctly t
 python -m pytest tests
 ```
 
-** Warning **
+**Warning**
 
 It is recommended to run this code on a computer with a CUDA-compatible GPU.
 
