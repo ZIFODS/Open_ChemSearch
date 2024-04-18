@@ -19,7 +19,7 @@ dependencies:
   # Libraries
   - attrs
   - boto3
-  - cupy=11.6
+  - cupy=13.0
   - dask=2023.3.1
   - fastapi
   - httpx
