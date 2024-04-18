@@ -1,0 +1,1 @@
+Original Dataset used for the manuscript as well as referenced in flattened.csv (https://github.com/ZIFODS/chemsearch/Openchemsearch/tests/logs/flattened.csv), can be found in Zenodo: https://zenodo.org/records/10842827
