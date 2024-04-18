@@ -13,11 +13,15 @@ To use this code, first ios needed to download the repo in Zip or Git format:
 - **Zip format** [Download](https://github.com/ZIFODS/Open_ChemSearch/archive/refs/heads/main.zip). Once downloaded you need to extract the zipped file on your computer.
 - **Git format**
 
-```git clone https://github.com/ZIFODS/Open_ChemSearch.git``` 
+```
+git clone https://github.com/ZIFODS/Open_ChemSearch.git
+``` 
 
 or 
 
-```git clone git@github.com:ZIFODS/Open_ChemSearch.git```
+```
+git clone git@github.com:ZIFODS/Open_ChemSearch.git
+```
 
 Prior to clone git need to be installed. Git download and installation instructions can be found [here](https://git-scm.com/downloads)
 
@@ -42,7 +46,7 @@ python -m pytest tests
 
 - It is recommended to run this code on a computer with a CUDA-compatible GPU. 
 
-- Get error messages after the test related to GPU is normalñ if a computer without a CUDA-compatible GPU is being used.
+- Get error messages after the test related to GPU is usual if a computer without a CUDA-compatible GPU is being used.
 
 - Cupy may give errors. Using environment.yml cupy 13.0 is installed. However you must make sure that it matches the version of cuda installed on the computer. More detailed on [Cupy](https://cupy.dev/).
 
