@@ -48,7 +48,7 @@ so it is better to generate them once for the application and then reuse.
 The [fingerprints script](src/chemsearch/scripts/fingerprints.py) reads molecules from SDF or SMI files, calculates fingerprints and writes them to a NumPy binary file.
 The file stores a matrix of fingerprints with dimensions (molecules, bit length).
 
-NumPy binary files of the **Original Datasets** used for the publication can be found in [**Zenodo**](https://zenodo.org/records/10842827)
+Binary files of the **Original Datasets** used for the publication can be found in [**Zenodo**](https://zenodo.org/records/10842827)
 
 **Command Line**
 
