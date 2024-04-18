@@ -24,9 +24,12 @@ python -m pytest tests
 
 **Warning**
 
-It is recommended to run this code on a computer with a CUDA-compatible GPU.
+It is recommended to run this code on a computer with a CUDA-compatible GPU. 
+
+Get error messages after the test related to GPU is normalñ if a computer without a CUDA-compatible GPU is being used.
 
 Cupy may give errors. Using environment.yml cupy 13.0 is installed. However you must make sure that it matches the version of cuda installed on the computer. More detailed on [Cupy](https://cupy.dev/).
+
 
 ## Usage
 
