@@ -8,6 +8,7 @@ The purpose of this project is to benchmark substructure search with different c
 
 ## Environment Setup
 
+
 The Python environment can be recreated through [Mamba](https://mamba.readthedocs.io/en/latest/):
 
 ```
@@ -20,6 +21,12 @@ Once the Python environment is activated, ensure everything is setup correctly t
 ```
 python -m pytest tests
 ```
+
+** Warning **
+
+It is recommended to run this code on a computer with a CUDA-compatible GPU.
+
+Cupy may give errors. Using environment.yml cupy 13.0 is installed. However you must make sure that it matches the version of cuda installed on the computer. More detailed on [Cupy](https://cupy.dev/).
 
 ## Usage
 
