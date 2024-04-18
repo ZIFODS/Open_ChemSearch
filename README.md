@@ -10,11 +10,13 @@ The purpose of this project is to benchmark substructure search with different c
 
 To use this code, first ios needed to download the repo in Zip or Git format:
 
-- [**Zip format**](https://github.com/ZIFODS/Open_ChemSearch/archive/refs/heads/main.zip). Once downloaded you need to extract the zipped file on your computer.
+- **Zip format** [Download](https://github.com/ZIFODS/Open_ChemSearch/archive/refs/heads/main.zip). Once downloaded you need to extract the zipped file on your computer.
 - **Git format**
 
 ```git clone https://github.com/ZIFODS/Open_ChemSearch.git``` 
+
 or 
+
 ```git clone git@github.com:ZIFODS/Open_ChemSearch.git```
 
 Prior to clone git need to be installed Instructions about hot to get and install git can be found [here](https://git-scm.com/downloads)
