@@ -40,13 +40,13 @@ python -m pytest tests
 
 **Warning**
 
-It is recommended to run this code on a computer with a CUDA-compatible GPU. 
+- It is recommended to run this code on a computer with a CUDA-compatible GPU. 
 
-Get error messages after the test related to GPU is normalñ if a computer without a CUDA-compatible GPU is being used.
+- Get error messages after the test related to GPU is normalñ if a computer without a CUDA-compatible GPU is being used.
 
-Cupy may give errors. Using environment.yml cupy 13.0 is installed. However you must make sure that it matches the version of cuda installed on the computer. More detailed on [Cupy](https://cupy.dev/).
+- Cupy may give errors. Using environment.yml cupy 13.0 is installed. However you must make sure that it matches the version of cuda installed on the computer. More detailed on [Cupy](https://cupy.dev/).
 
-Not change the directory to execute the tests. Remain in OpenChemsearch main folder.
+- Not change the directory to execute the tests. Remain in OpenChemsearch main folder.
 
 
 ## Usage
