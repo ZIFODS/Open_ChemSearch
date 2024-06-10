@@ -7,15 +7,15 @@ from chemsearch.app.config import Settings, read_settings_from_json
 class TestSettings:
     def test_completes(self):
         _ = Settings(
-            molecules="tests/data/sample.smi",
-            fingerprints="tests/data/sample_fingerprints.npy",
+            molecules="tests/TestData/sample.smi",
+            fingerprints="tests/TestData/sample_fingerprints.npy",
             bit_length=2048,
         )
 
     def test_returns_settings(self):
         actual = Settings(
-            molecules="tests/data/sample.smi",
-            fingerprints="tests/data/sample_fingerprints.npy",
+            molecules="tests/TestData/sample.smi",
+            fingerprints="tests/TestData/sample_fingerprints.npy",
             bit_length=2048,
         )
 
@@ -25,7 +25,7 @@ class TestSettings:
         with pytest.raises(FileNotFoundError) as excinfo:
             _ = Settings(
                 molecules="unrecognised",
-                fingerprints="tests/data/sample_fingerprints.npy",
+                fingerprints="tests/TestData/sample_fingerprints.npy",
                 bit_length=2048,
             )
 
@@ -34,7 +34,7 @@ class TestSettings:
     def test_raises_exception_given_fingerprints_file_does_not_exist(self):
         with pytest.raises(FileNotFoundError) as excinfo:
             _ = Settings(
-                molecules="tests/data/sample.smi",
+                molecules="tests/TestData/sample.smi",
                 fingerprints="unrecognised",
                 bit_length=2048,
             )
@@ -45,7 +45,7 @@ class TestSettings:
 class TestReadSettingsFromJSON:
     @pytest.fixture
     def filepath(self):
-        return here() / "tests" / "data" / "settings.json"
+        return here() / "tests" / "TestData" / "settings.json"
 
     def test_completes(self, filepath):
         read_settings_from_json(filepath)
@@ -55,15 +55,15 @@ class TestReadSettingsFromJSON:
 
         assert actual == [
             Settings(
-                molecules="tests/data/sample.smi",
-                fingerprints="tests/data/sample_fingerprints.npy",
+                molecules="tests/TestData/sample.smi",
+                fingerprints="tests/TestData/sample_fingerprints.npy",
                 cartridge="rdkit",
                 bit_length=2048,
                 fingerprint_method="cpu",
             ),
             Settings(
-                molecules="tests/data/sample.smi",
-                fingerprints="tests/data/sample_fingerprints.npy",
+                molecules="tests/TestData/sample.smi",
+                fingerprints="tests/TestData/sample_fingerprints.npy",
                 cartridge="rdkit",
                 bit_length=2048,
                 fingerprint_method="gpu",

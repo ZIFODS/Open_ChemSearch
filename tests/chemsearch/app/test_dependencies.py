@@ -16,7 +16,7 @@ def tmp_dir(tmpdir):
 
 @pytest.fixture
 def test_dir():
-    return here() / "tests" / "data"
+    return here() / "tests" / "TestData"
 
 
 class TestGetDaskClient:

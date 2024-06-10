@@ -42,7 +42,7 @@ def molecules(smiles, factory):
 @pytest.fixture(params=[FingerprintMethods.CPU, FingerprintMethods.GPU])
 def fingerprints(request):
     factory = FingerprintsFactory(request.param)
-    filepath = here() / "tests" / "data" / "sample_fingerprints.npy"
+    filepath = here() / "tests" / "TestData" / "sample_fingerprints.npy"
     return factory.from_file(filepath)
 
 

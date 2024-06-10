@@ -16,7 +16,7 @@ class TestFingerprintsFactory:
 
     @pytest.fixture
     def data_dir(self):
-        return here() / "tests" / "data"
+        return here() / "tests" / "TestData"
 
     @pytest.fixture
     def filepath(self, data_dir):

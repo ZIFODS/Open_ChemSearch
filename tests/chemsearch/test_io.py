@@ -14,7 +14,7 @@ from chemsearch.molecule.rdkit import RDKitMolecule
 
 @pytest.fixture
 def data_dir():
-    return here() / "tests" / "data"
+    return here() / "tests" / "TestData"
 
 
 @pytest.fixture

@@ -14,7 +14,7 @@ client = TestClient(app)
 
 
 def get_settings_override():
-    test_dir = here() / "tests" / "data"
+    test_dir = here() / "tests" / "TestData"
 
     return Settings(
         molecules=str(test_dir / "sample.smi"),

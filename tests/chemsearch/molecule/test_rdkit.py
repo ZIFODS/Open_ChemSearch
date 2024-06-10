@@ -12,7 +12,7 @@ from chemsearch.molecule.rdkit import RDKitMolecule
 class TestRDKitMolecule:
     @pytest.fixture
     def mol_block(self):
-        filepath = here() / "tests" / "data" / "sample.mol"
+        filepath = here() / "tests" / "TestData" / "sample.mol"
 
         with open(filepath) as fh:
             text = fh.read()

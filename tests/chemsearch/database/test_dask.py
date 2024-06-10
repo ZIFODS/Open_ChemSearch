@@ -19,7 +19,7 @@ class MoleculesSchema(pa.SchemaModel):
 
 @pytest.fixture
 def data_dir():
-    return here() / "tests" / "data"
+    return here() / "tests" / "TestData"
 
 
 class TestDaskDatabase:
